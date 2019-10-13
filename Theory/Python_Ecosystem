@@ -1,0 +1,97 @@
+Hệ sinh thái Python đang phát triển và có thể trở thành một platform ưu thế cho machine learning.
+Lý do mà dùng Python là vì ngôn ngữ lập trình mực đích chung tức là có thể sử dụng cả cho R&D và Production (nghiên cứu và tạo sản phẩm).
+
+SciPy là một hệ sinh thái của Python libraries cho toán học, khoa học và kỹ thuật. Nó cần thiết cho machine learning. Nó bao gồm các core modules thích hợp cho ML 
+    - Numpy : Nền tảng của SciPy, cho phép ta làm việc hiệu quả với dữ liệu trong các mảng.
+    - Matplotlib : Giúp ta tạo biểu đồ và đồ thị 2D từ dữ liệu.
+    - Pandas : Các công cụ và cấu trúc dữ liệu cho việc tổ chức và phân tích dữ liệu của chúng ta.
+
+scikit-learn 
+Thư viện scikit-learn giúp chúng ta dev và thực hành ML trong Python. Nó xây dựng trên SciPy. Thưc viện này tập chung  vào thuật toán ML classification, regeression, clustering vào
+nhiều hơn. 
+
+1. Tóm tắt về kiến thức cơ bản Python.
+Khi mà bắt đầu với Python chúng ta cần biết một vài key chi tiết về cú pháp ngôn ngữ để có thể đọc và hiểu Python code. Những cái này bao gồm:
+    - Assignment (gán)
+    - Flow Control (luồng điều khiển)
+    - Data Structures (cấu trúc dữ liệu)
+    - Functions (hàm)
+
+    1. Assignment
+        Strings
+            data = 'hello world'
+            print(data[0])
+            print(len(data))
+            print(data)
+        
+        Numbers
+            value = 123.1
+            print(value)
+            value=10
+            print(value)
+        
+        Boolean
+            a = True
+            b = False
+            print(a,b)
+
+        Multiple Assignment
+            a,b,c = 1,2,3
+            print(a,b,c)
+
+        No value
+            a = None
+            print(a)
+
+    2. Flow Control
+    Có 3 kiểu chính cho luồng điều khiển mà chúng ta cần biết: If-Then-Else, For-Loops, While-Loops
+
+        1. If-Then-Else Conditional
+
+            value = 99
+            if value==99 :
+                print 'That is fast'
+            elif value>200 :
+                print 'That is too fast'
+            else:
+                print 'That is safe'
+        
+        Chú ý dấu (:) tại cuối dòng điều kiện và ý nghĩa tab cho block code bên dưới điều kiện
+
+        2. Foor-Loop
+
+            for i in range(10):
+                print i
+            
+            i = 0
+            while i < 10:
+                print i
+                i += 1
+    
+    2. Data Structures
+        Có 3 kiểu cấu trúc dữ liệu trong Python. tuples, lists, dictionaries
+
+        Tuple : Tuples chỉ có thể đọc danh sách các items, có thể sử dụng index để truy xuất, khởi tạo giá trị ngay khi khai báo. 
+            a = (1,2,3)
+
+        List : List sử dụng ký hiệu [] và có index để truy xuất
+            myList = [1,2,3]
+            myList.append(4)
+
+        Dictionary : là kiểu cấu trúc mapping giữa tên và giá trị (key-value), chú ý là chúng ta sử dụng ngoặc nhọn {} và colon notations khi định nghĩa dictionary
+
+            mydict = {'a':1, 'b':2, 'c':3}
+    
+    3. Functions
+            def mySum(x,y):
+                return x+y
+        
+        Trên là cách định nghĩa một hàm, bắt đầu bằng key def (definition) theo sau là tên hàm +() trong dấu () sẽ là các tham tham số, cuối cùng là (:) để end câu lệnh
+        phần bên dưới chúng ta sẽ phải thụt đầu dòng để thể hiện đây là block định nghĩa của hàm.
+
+2. Numpy Crash Course
+    Numpy cung cấp các cấu trúc dữ liệu và toán tử nền tảng cho SciPy. Các mảng này (ndarrays) có hiệu quả để định nghĩa và vận dụng.
+        1. Create Array
+            import Numpy as np
+            myList=[1,2,3]
+            myarray=np.array(myList)
